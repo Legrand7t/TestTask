@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 @Listeners(TestAllureListener.class)
 public class LoginPageTest extends BaseTest {
 
@@ -29,7 +31,7 @@ public class LoginPageTest extends BaseTest {
 
     @Description("Login with invalid credentials")
     @Test(priority = 2)
-    public void loginWithInvalidData() {
+    public void loginWithInvalidData() throws IOException {
         openWebsite(URL);
         LoginPage loginPage = new LoginPage();
         loginPage.login(USER_NAME, USER_PASSWORD);

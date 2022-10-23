@@ -31,7 +31,7 @@ mvn clean test -Dbrowser="firefox"
 Type from terminal for running report:
 
 ```
-allure serve allure-results
+allure serve target/allure-results
 
 ```
 
